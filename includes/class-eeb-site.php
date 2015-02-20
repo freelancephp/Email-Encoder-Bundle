@@ -218,10 +218,7 @@ CSS;
         }
 
         // workaround for double encoding bug when auto-protect mailto is enabled and method is enc_html
-        if ($this->options['encode_mailtos'] == 1) {
-            // change back to html tag
-            $content = str_replace('[a-replacement]', '<a', $content);
-        }
+        $content = str_replace('[a-replacement]', '<a', $content);
 
         return $content;
     }
@@ -233,12 +230,17 @@ CSS;
      */
     public function callback_encode_email($match) {
         if (count($match) < 3) {
-            return $this->encode_email($match[1]);
+            $encoded = $this->encode_email($match[1]);
         } else if (count($match) == 3) {
-            return $this->encode_email($match[2]);
+            $encoded = $this->encode_email($match[2]);
+        } else {
+            $encoded = $this->encode_email($match[2], $match[4], $match[1] . ' ' . $match[3]);
         }
 
-        return $this->encode_email($match[2], $match[4], $match[1] . ' ' . $match[3]);
+        // workaround for double encoding bug when auto-protect mailto is enabled and method is enc_html
+        $encoded = str_replace('<a', '[a-replacement]', $encoded);
+
+        return $encoded;
     }
 
     /* -------------------------------------------------------------------------
@@ -275,10 +277,7 @@ CSS;
         $encoded = $this->encode_email($email, $display, $extra_attrs, $method);
 
         // workaround for double encoding bug when auto-protect mailto is enabled and method is enc_html
-        if ($this->options['encode_mailtos'] == 1 && $method === 'enc_html') {
-            // change html tag to entity
-            $encoded = str_replace('<a', '[a-replacement]', $encoded);
-        }
+        $encoded = str_replace('<a', '[a-replacement]', $encoded);
 
         return $encoded;
     }
