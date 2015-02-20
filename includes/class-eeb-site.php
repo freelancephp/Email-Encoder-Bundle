@@ -418,11 +418,6 @@ CSS;
      *  Different Encoding Methods
      * ------------------------------------------------------------------------*/
 
-    //public function encodeURIComponent($str) {
-    //    $revert = array('%21'=>'!', '%2A'=>'*', '%27'=>"'", '%28'=>'(', '%29'=>')');
-    //    return strtr(rawurlencode($str), $revert);
-    //}
-
     /**
      * ASCII method
      * Based on function from Tyler Akins (http://rumkin.com/tools/mailto_encoder/)
