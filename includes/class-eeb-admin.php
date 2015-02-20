@@ -21,6 +21,7 @@ abstract class Eeb_Admin {
         'method' => 'enc_ascii',
         'encode_mailtos' => 1,
         'encode_emails' => 0,
+        'encode_fields' => 1,
         'filter_posts' => 1,
         'filter_widgets' => 1,
         'filter_comments' => 1,
@@ -324,7 +325,11 @@ abstract class Eeb_Admin {
                             <span><?php _e('Protect mailto links, like f.e. <code>&lt;a href="info@myemail.com"&gt;My Email&lt;/a&gt;</code>', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
                         <br/><label><input type="checkbox" id="encode_emails" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[encode_emails]" value="1" <?php checked('1', (int) $options['encode_emails']); ?> disabled="disabled" />
                             <span><?php _e('Replace plain email addresses to protected mailto links.', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
-                            <span class="description notice-form-field-bug"><br/><?php _e('Notice: be carefull with this option when using email addresses on form fields, please <a href="http://wordpress.org/extend/plugins/email-encoder-bundle/faq/" target="_blank">check the FAQ</a> for more info.', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
+                            <!--<span class="description notice-form-field-bug"><br/><?php _e('Notice: be carefull with this option when using email addresses on form fields, please <a href="http://wordpress.org/extend/plugins/email-encoder-bundle/faq/" target="_blank">check the FAQ</a> for more info.', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>-->
+                        </label>
+                        <br/><label><input type="checkbox" id="encode_fields" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[encode_fields]" value="1" <?php checked('1', (int) $options['encode_fields']); ?> />
+                            <span><?php _e('Replace prefilled email addresses in input fields.', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
+                            <span class="description"><?php _e(' - Recommended!', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
                         </label>
                     <br/>
                     </td>
@@ -653,7 +658,7 @@ abstract class Eeb_Admin {
                      . '    echo eeb_email_filter(\'Some content with email like info@somedomein.com or a mailto link\');' . "\n"
                      . '}' . "\n"
                      . '&#63;></code></pre>'
-                     . '<p>You can pass a few extra optional params (in this order): <code>enc_tags</code>, <code>enc_mailtos</code>, <code>enc_plain_emails</code></p>'
+                     . '<p>You can pass a few extra optional params (in this order): <code>enc_tags</code>, <code>enc_mailtos</code>, <code>enc_plain_emails</code>, <code>enc_input_fields</code></p>'
                      . '<h4>eeb_form()</h4>'
                      . '<p>Create an encoder form:</p>'
                      . '<pre><code><&#63;php' . "\n"

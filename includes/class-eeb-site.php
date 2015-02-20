@@ -31,6 +31,7 @@ final class Eeb_Site extends Eeb_Admin {
     private $regexp_patterns = array(
         'mailto' => '/<a([^<>]*?)href=["\']mailto:(.*?)["\'](.*?)>(.*?)<\/a[\s+]*>/is',
         'email' => '/([A-Z0-9._-]+@[A-Z0-9][A-Z0-9.-]{0,61}[A-Z0-9]\.[A-Z.]{2,6})/is',
+        'input' => '/<input([^>]*)value=["\'][\s+]*([A-Z0-9._-]+@[A-Z0-9][A-Z0-9.-]{0,61}[A-Z0-9]\.[A-Z.]{2,6})[\s+]*["\']([^>]*)>/is',
     );
 
     /**
@@ -172,7 +173,7 @@ CSS;
             return $content;
         }
 
-        return $this->encode_email_filter($content, true, $this->options['encode_mailtos'], $this->options['encode_emails']);
+        return $this->encode_email_filter($content, true, $this->options['encode_mailtos'], $this->options['encode_emails'], $this->options['encode_fields']);
     }
 
     /**
@@ -204,9 +205,15 @@ CSS;
      * @param boolean $enc_tags Optional, default true
      * @param boolean $enc_mailtos  Optional, default true
      * @param boolean $enc_plain_emails Optional, default true
+     * @param boolean $enc_input_fields Optional, default true
      * @return string
      */
-    public function encode_email_filter($content, $enc_tags = true, $enc_mailtos = true, $enc_plain_emails = true) {
+    public function encode_email_filter($content, $enc_tags = true, $enc_mailtos = true, $enc_plain_emails = true, $enc_input_fields = true) {
+        // encode input fields with prefilled email address
+        if ($enc_input_fields) {
+            $content = preg_replace_callback($this->regexp_patterns['input'], array($this, 'callback_encode_input_field'), $content);
+        }
+
         // encode mailto links
         if ($enc_mailtos) {
             $content = preg_replace_callback($this->regexp_patterns['mailto'], array($this, 'callback_encode_email'), $content);
@@ -239,6 +246,26 @@ CSS;
 
         // workaround for double encoding bug when auto-protect mailto is enabled and method is enc_html
         $encoded = str_replace('<a', '[a-replacement]', $encoded);
+
+        return $encoded;
+    }
+
+    /**
+     * Callback for encoding input field with email address
+     * @param array $match
+     * @return string
+     */
+    public function callback_encode_input_field($match) {
+        if ($this->method === 'enc_html') {
+            // enc_html method
+            $email = $match[2];
+            $encoded_email = $this->enc_html($email);
+
+            $encoded = str_replace($email , $encoded_email, $match[0]);
+            $encoded = $this->get_success_check($encoded);
+        } else {
+            $encoded = $this->encode_content($match[0]);
+        }
 
         return $encoded;
     }

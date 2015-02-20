@@ -46,12 +46,13 @@ if (!is_admin()):
      * @param boolean $enc_tags Optional, default true
      * @param boolean $enc_mailtos  Optional, default true
      * @param boolean $enc_plain_emails Optional, default true
+     * @param boolean $enc_input_fields Optional, default true
      * @return string
      */
     if (!function_exists('eeb_email_filter')):
-        function eeb_email_filter($content, $enc_tags = true, $enc_mailtos = true, $enc_plain_emails = true) {
+        function eeb_email_filter($content, $enc_tags = true, $enc_mailtos = true, $enc_plain_emails = true, $enc_input_fields = true) {
             global $Eeb_Site;
-            return $Eeb_Site->encode_email_filter($content, $enc_tags, $enc_mailtos, $enc_plain_emails);
+            return $Eeb_Site->encode_email_filter($content, $enc_tags, $enc_mailtos, $enc_plain_emails, $enc_input_fields);
         }
     endif;
 
