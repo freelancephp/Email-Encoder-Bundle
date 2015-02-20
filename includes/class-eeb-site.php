@@ -329,15 +329,20 @@ CSS;
      * Encode the given email into an encoded HTML link
      * @param string $content
      * @param string $method Optional, else the default setted method will; be used
-     * @param boolean $no_html_checked
+     * @param boolean $no_html_checked  Optional
+     * @param string $protection_text  Optional
      * @return string
      */
-    public function encode_content($content, $method = null, $no_html_checked = false) {
+    public function encode_content($content, $method = null, $no_html_checked = false, $protection_text = null) {
+        if ($protection_text === null) {
+            $protection_text = $this->options['protection_text_content'];
+        }
+
         // get encode method
         $method = $this->get_method($method, $this->method);
 
         // get encoded email code
-        $content = $this->{$method}($content);
+        $content = $this->{$method}($content, $protection_text);
 
         // add visual check
         if ($no_html_checked !== true) {
@@ -388,7 +393,7 @@ CSS;
                 $mailto = $this->get_success_check($mailto);
             }
         } else {
-            $mailto = $this->encode_content($mailto, $method, $no_html_checked);
+            $mailto = $this->encode_content($mailto, $method, $no_html_checked, $this->options['protection_text']);
         }
 
         // get encoded email code
@@ -422,9 +427,10 @@ CSS;
      * Based on function from Tyler Akins (http://rumkin.com/tools/mailto_encoder/)
      *
      * @param string $value
+     * @param string $protection_text
      * @return string
      */
-    private function enc_ascii($value) {
+    private function enc_ascii($value, $protection_text) {
         $mail_link = $value;
 
         // first encode, so special chars can be supported
@@ -463,7 +469,7 @@ CSS;
                 . '}document.write(decodeURIComponent(o));' // decode at the end, this way special chars can be supported
                 . '}());'
                 . '</script><noscript>'
-                . $this->options['protection_text']
+                . $protection_text
                 . '</noscript>';
     }
 
@@ -483,9 +489,10 @@ CSS;
      * Taken from the plugin "Email Spam Protection" by Adam Hunter (http://blueberryware.net/2008/09/14/email-spam-protection/)
      *
      * @param string $value
+     * @param string $protection_text
      * @return string
      */
-    private function enc_escape($value) {
+    private function enc_escape($value, $protection_text) {
         $string = 'document.write(\'' . $value . '\')';
 
         // break string into array of characters, we can't use string_split because its php5 only
@@ -500,7 +507,7 @@ CSS;
         }
 
         $out .= "'))" . '</script><noscript>'
-            . $this->options['protection_text']
+            . $protection_text
             . '</noscript>';
 
         return $out;

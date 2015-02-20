@@ -27,6 +27,7 @@ abstract class Eeb_Admin {
         'filter_comments' => 1,
         'skip_posts' => '',
         'protection_text' => '*protected email*',
+        'protection_text_content' => '*protected content*',
         'class_name' => 'mailto-link',
         'filter_rss' => 1,
         'remove_shortcodes_rss' => 1,
@@ -410,9 +411,18 @@ abstract class Eeb_Admin {
                 </tr>
                 <tr>
                     <th><?php _e('Set <code>&lt;noscript&gt;</code> text', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></th>
-                    <td><label><input type="text" id="protection_text" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[protection_text]" value="<?php echo $options['protection_text']; ?>" />
-                            <br/><span class="description"><?php _e('Used for the <code>&lt;noscript&gt;</code> fallback for JavaScrip methods.', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
+                    <td><label>
+                            <span><?php _e('For encoded emails:', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
+                            <br/><input type="text" id="protection_text" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[protection_text]" value="<?php echo $options['protection_text']; ?>" />
                         </label>
+                        <br/>
+                        <br/>
+                        <label>
+                            <span><?php _e('For other encoded content:', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
+                            <br/><input type="text" id="protection_text_content" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[protection_text_content]" value="<?php echo $options['protection_text_content']; ?>" />
+                        </label>
+                        <br/>
+                        <br/><span class="description"><?php _e('Used as <code>&lt;noscript&gt;</code> fallback for JavaScrip methods.', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
                     </td>
                 </tr>
                 <tr>
