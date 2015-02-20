@@ -306,7 +306,6 @@ CSS;
      * @param boolean $no_html_checked
      * @return string
      */
-
     public function encode_content($content, $method = null, $no_html_checked = false) {
         // get encode method
         $method = $this->get_method($method, $this->method);
