@@ -384,6 +384,8 @@ CSS;
             $email = $this->enc_html($email);
         }
 
+        $extra_attrs = ' ' . trim($extra_attrs);
+
         // add class
         if (preg_match($this->regexp_patterns['class'], $extra_attrs, $matches)) {
             // class attribute set
@@ -392,8 +394,6 @@ CSS;
             // class attribute not set
             $extra_attrs .= ' class="' . $this->options['class_name'] . '"';
         }
-
-        $extra_attrs = ' ' . trim($extra_attrs);
 
         $mailto = '<a href="mailto:' . $email . '"'. $extra_attrs . '>' . $display . '</a>';
 
