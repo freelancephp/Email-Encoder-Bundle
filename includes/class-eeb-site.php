@@ -32,6 +32,7 @@ final class Eeb_Site extends Eeb_Admin {
         'mailto' => '/<a([^<>]*?)href=["\']mailto:(.*?)["\'](.*?)>(.*?)<\/a[\s+]*>/is',
         'email' => '/([A-Z0-9._-]+@[A-Z0-9][A-Z0-9.-]{0,61}[A-Z0-9]\.[A-Z.]{2,6})/is',
         'input' => '/<input([^>]*)value=["\'][\s+]*([A-Z0-9._-]+@[A-Z0-9][A-Z0-9.-]{0,61}[A-Z0-9]\.[A-Z.]{2,6})[\s+]*["\']([^>]*)>/is',
+        'class' => '/class=["\'](.*?)["\']/i',
     );
 
     /**
@@ -383,9 +384,18 @@ CSS;
             $email = $this->enc_html($email);
         }
 
-        $class = $this->options['class_name'];
+        // add class
+        if (preg_match($this->regexp_patterns['class'], $extra_attrs, $matches)) {
+            // class attribute set
+            $extra_attrs = str_replace($matches[0], sprintf('class="%s"', $matches[1] . ' ' . $this->options['class_name']), $extra_attrs);
+        } else {
+            // class attribute not set
+            $extra_attrs .= ' class="' . $this->options['class_name'] . '"';
+        }
+
         $extra_attrs = ' ' . trim($extra_attrs);
-        $mailto = '<a class="'. $class .'" href="mailto:' . $email . '"'. $extra_attrs . '>' . $display . '</a>';
+
+        $mailto = '<a href="mailto:' . $email . '"'. $extra_attrs . '>' . $display . '</a>';
 
         if ($method === 'enc_html') {
             // add visual check
