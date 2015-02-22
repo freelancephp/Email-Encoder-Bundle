@@ -146,16 +146,20 @@ final class Eeb_Site extends Eeb_Admin {
      * WP head
      */
     public function wp_head() {
-            // add styling for encoding check message + icon
-            if ($this->is_admin_user && $this->options['show_encoded_check']) {
-                echo <<<CSS
-<style type="text/css">
-    a.encoded-check { opacity:0.5; position:absolute; text-decoration:none !important; font:10px Arial !important; margin-top:-3px; color:#629632; font-weight:bold; }
-    a.encoded-check:hover { opacity:1; cursor:help; }
-    a.encoded-check img { width:10px; height:10px; }
-</style>
-CSS;
-            }
+        $css = '';
+        $css .= '<style type="text/css" media="screen">';
+
+        // add styling for encoding check message + icon
+        if ($this->is_admin_user && $this->options['show_encoded_check']) {
+            $css .= 'a.encoded-check { opacity:0.5; position:absolute; text-decoration:none !important; font:10px Arial !important; margin-top:-3px; color:#629632; font-weight:bold; }';
+            $css .= 'a.encoded-check:hover { opacity:1; cursor:help; }';
+            $css .= 'a.encoded-check img { width:10px; height:10px; }';
+        }
+
+//        $css .= 'a[href^="mailto:"] .fa { margin-right:0.4em; }';
+        $css .= '</style>';
+
+        echo $css;
     }
 
     /* -------------------------------------------------------------------------
