@@ -1,0 +1,622 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: email-encoder-bundle\n"
+"POT-Creation-Date: 2015-06-22 15:26+0100\n"
+"PO-Revision-Date: 2015-06-22 18:12+0100\n"
+"Last-Translator: Victor <info@freelancephp.net>\n"
+"Language-Team:  <info@freelancephp.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"Language: nl_NL\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../email-encoder-bundle.php:57
+#, php-format
+msgid ""
+"<p>Warning - The plugin <strong>%s</strong> requires PHP 5.2.4+ and WP "
+"3.6+.  Please upgrade your PHP and/or WordPress.<br/>Disable the plugin to "
+"remove this message.</p>"
+msgstr ""
+"<p>Waarschuwing - Deze plugin <strong>%s</strong> vereist PHP 5.2.4+ en WP "
+"3.6+.  Upgrade PHP en/of WordPress versie.<br/>Deze waarschuwing verdwijnt "
+"zodra u de plugin uitschakelt.</p>"
+
+#: ../includes/class-eeb-admin.php:78
+msgid "JS Rot13"
+msgstr "JS Rot13"
+
+#: ../includes/class-eeb-admin.php:79
+msgid "Recommended, the savest method using a rot13 method in JavaScript."
+msgstr "Aanbevolen, de veiligste methode is rot13 met JavaScript"
+
+#: ../includes/class-eeb-admin.php:82
+msgid "JS Escape"
+msgstr "JS Escape"
+
+#: ../includes/class-eeb-admin.php:83
+msgid "Pretty save method using JavaScipt's escape function."
+msgstr "Redelijk veilige methode, gebruikt de JavaScript escape functie"
+
+#: ../includes/class-eeb-admin.php:86
+msgid "Html Encode"
+msgstr "Html Encoderen"
+
+#: ../includes/class-eeb-admin.php:87
+msgid ""
+"Not recommended, equal to <a href=\"http://codex.wordpress.org/"
+"Function_Reference/antispambot\" target=\"_blank\"><code>antispambot()</"
+"code></a> function of WordPress."
+msgstr ""
+"Niet aanbevolen, equivalent van de  ingebouwde <a href=\"http://codex."
+"wordpress.org/Function_Reference/antispambot\" target=\"_blank"
+"\"><code>antispambot()</code></a> functie in WordPress"
+
+#: ../includes/class-eeb-admin.php:196 ../includes/class-eeb-admin.php:478
+#: ../includes/class-eeb-admin.php:534 ../includes/class-eeb-admin.php:547
+msgid "Settings"
+msgstr "Instellingen"
+
+#: ../includes/class-eeb-admin.php:210 ../includes/class-eeb-admin.php:215
+msgid "Email Encoder Bundle"
+msgstr "Email Encoder Bundle"
+
+#: ../includes/class-eeb-admin.php:251
+msgid "Main Settings"
+msgstr "Algemene Instellingen"
+
+#: ../includes/class-eeb-admin.php:252
+msgid "Additional Settings"
+msgstr "Aanvullende Instellingen"
+
+#: ../includes/class-eeb-admin.php:253
+msgid "RSS Settings"
+msgstr "RSS Instellingen"
+
+#: ../includes/class-eeb-admin.php:254
+msgid "Admin Settings"
+msgstr "Admin Instellingen"
+
+#: ../includes/class-eeb-admin.php:255
+msgid "Email Encoder Form"
+msgstr "Email Encoder Formulier"
+
+#: ../includes/class-eeb-admin.php:256
+msgid "Support"
+msgstr "Ondersteuning"
+
+#: ../includes/class-eeb-admin.php:257
+msgid "Other Plugins"
+msgstr "Andere Plugins"
+
+#: ../includes/class-eeb-admin.php:268
+msgid "Protect Email Addresses"
+msgstr "Bescherm Email Adressen"
+
+#: ../includes/class-eeb-admin.php:272
+msgid "Settings saved."
+msgstr "Instellingen opgeslagen."
+
+#: ../includes/class-eeb-admin.php:318
+msgid ""
+"Warning: \"WP Mailto Links\"-plugin is also activated, which could cause "
+"conflicts."
+msgstr ""
+"Waarschuwing: \"WP Mailto Links\"-plugin is ook geactiveerd en kan "
+"conflicten veroorzaken."
+
+#: ../includes/class-eeb-admin.php:323
+msgid "Choose what to protect"
+msgstr "Kies wat te beschermen"
+
+#: ../includes/class-eeb-admin.php:326
+msgid ""
+"Protect mailto links, like f.e. <code>&lt;a href=\"info@myemail.com\"&gt;My "
+"Email&lt;/a&gt;</code>"
+msgstr ""
+"Bescherm mailto links, zoals bijv. <code>&lt;a href=\"info@myemail.com\"&gt;"
+"Mijn Email&lt;/a&gt;</code>"
+
+#: ../includes/class-eeb-admin.php:328
+msgid "Replace plain email addresses to protected mailto links."
+msgstr "Maak van email adressen veilige mailto links"
+
+#: ../includes/class-eeb-admin.php:329
+msgid ""
+"Notice: be carefull with this option when using email addresses on form "
+"fields, please <a href=\"http://wordpress.org/extend/plugins/email-encoder-"
+"bundle/faq/\" target=\"_blank\">check the FAQ</a> for more info."
+msgstr ""
+"Opmerking: wees voorzichtig met deze optie als je email addressen in "
+"formulier velden gebruikt, <a href=\"http://wordpress.org/extend/plugins/"
+"email-encoder-bundle/faq/\" target=\"_blank\">check deFAQ</a> voor meer info."
+
+#: ../includes/class-eeb-admin.php:332
+msgid "Replace prefilled email addresses in input fields."
+msgstr "Bescherm vooringevulde email adressen in formulier velden"
+
+#: ../includes/class-eeb-admin.php:333
+msgid " - Recommended!"
+msgstr " - Aanbevolen!"
+
+#: ../includes/class-eeb-admin.php:339
+msgid "Apply on..."
+msgstr "Toepassen op..."
+
+#: ../includes/class-eeb-admin.php:342
+msgid "All posts and pages"
+msgstr "Alle posts en pagina's"
+
+#: ../includes/class-eeb-admin.php:345
+msgid "All comments"
+msgstr "Alle reacties"
+
+#: ../includes/class-eeb-admin.php:347
+msgid ""
+"All widgets (uses the <code>widget_content</code> filter of the Widget Logic "
+"plugin)"
+msgstr ""
+"Alle widgets (maakt gebruik van de <code>widget_content</code> filter van de "
+"Widget Logic plugin)"
+
+#: ../includes/class-eeb-admin.php:347 ../includes/class-eeb-admin.php:444
+msgid "All text widgets"
+msgstr "Alle tekst widgets"
+
+#: ../includes/class-eeb-admin.php:351
+msgid "Add class to protected mailto links"
+msgstr "Voeg een CSS class toe aan de mailto links"
+
+#: ../includes/class-eeb-admin.php:353
+msgid ""
+"All protected mailto links will get these class(es). Optional, else keep "
+"blank."
+msgstr ""
+"Alle beschermde mailto links krijgen deze class(es). Optioneel, mag ook leeg "
+"laten."
+
+#: ../includes/class-eeb-admin.php:359 ../includes/class-eeb-admin.php:391
+#: ../includes/class-eeb-admin.php:458 ../includes/class-eeb-admin.php:486
+#: ../includes/class-eeb-admin.php:516
+msgid "Save Changes"
+msgstr "Wijzigingen Opgeslagen"
+
+#: ../includes/class-eeb-admin.php:369
+msgid "Protect emails in RSS feeds"
+msgstr "Bescherm emails in RSS feeds"
+
+#: ../includes/class-eeb-admin.php:371
+msgid "Replace emails in RSS feeds."
+msgstr "Bescherm emails in RSS feeds"
+
+#: ../includes/class-eeb-admin.php:375
+msgid "Remove shortcodes from RSS feeds"
+msgstr "Verwijder shortcodes uit RSS feeds"
+
+#: ../includes/class-eeb-admin.php:377
+msgid "Remove all shortcodes from the RSS feeds."
+msgstr "Verwijder alle shortcodes uit de RSS feeds"
+
+#: ../includes/class-eeb-admin.php:381
+msgid "Set protection text in RSS feeds"
+msgstr "Zet de vervangende text voor RSS feeds"
+
+#: ../includes/class-eeb-admin.php:383
+msgid "Used as replacement for email addresses in RSS feeds."
+msgstr ""
+"Deze tekst wordt gebruikt om te tonen op de plek van de email adressen in "
+"RSS feeds"
+
+#: ../includes/class-eeb-admin.php:400
+msgid "Choose protection method"
+msgstr "Kies een beschermmethode"
+
+#: ../includes/class-eeb-admin.php:413
+msgid "Set <code>&lt;noscript&gt;</code> text"
+msgstr "Zet  <code>&lt;noscript&gt;</code> tekst"
+
+#: ../includes/class-eeb-admin.php:415
+msgid "For encoded emails:"
+msgstr "Voor beschermde emails:"
+
+#: ../includes/class-eeb-admin.php:421
+msgid "For other encoded content:"
+msgstr "Voor ander beschermde content:"
+
+#: ../includes/class-eeb-admin.php:425
+msgid "Used as <code>&lt;noscript&gt;</code> fallback for JavaScrip methods."
+msgstr ""
+"Gebruikt als <code>&lt;noscript&gt;</code> vangnet voor JavaScrip methoden."
+
+#: ../includes/class-eeb-admin.php:429
+msgid "Exclude posts"
+msgstr "Posts uitsluiten"
+
+#: ../includes/class-eeb-admin.php:432
+msgid ""
+"Do <strong>not</strong> apply protection on posts or pages with the "
+"folllowing ID:"
+msgstr ""
+"Do <strong>not</strong> apply protection on posts or pages with the "
+"folllowing ID:"
+
+#: ../includes/class-eeb-admin.php:434
+msgid "Seperate Id's by comma, f.e.: 2, 7, 13, 32."
+msgstr "Scheid Id's met een komma, bijv: 2, 7, 13, 32"
+
+#: ../includes/class-eeb-admin.php:435
+msgid "Notice: shortcodes still work on these posts."
+msgstr "Opmerking: shortcodes werken nog steeds voor deze posts."
+
+#: ../includes/class-eeb-admin.php:440
+msgid "Use shortcodes in widgets"
+msgstr "Gebruik shortcodes in widgets"
+
+#: ../includes/class-eeb-admin.php:443
+msgid "Also use shortcodes in widgets."
+msgstr "Gebruik ook shortcodes in widgets"
+
+#: ../includes/class-eeb-admin.php:444
+msgid "Notice: only works for text widgets!"
+msgstr "Opmerking: werkt alleen voor tekst widgets!"
+
+#: ../includes/class-eeb-admin.php:449
+msgid "Use deprecated names"
+msgstr "Gebruik afgeschafte (deprecated) namen"
+
+#: ../includes/class-eeb-admin.php:451
+msgid ""
+"Keep supporting the old names for action, shortcodes and template functions."
+msgstr ""
+"Blijf de oude namen voor acties, shortcodes en template functies ondersteunen"
+
+#: ../includes/class-eeb-admin.php:467
+msgid "Check \"succesfully encoded\""
+msgstr "Check \"Veilig beschermd\""
+
+#: ../includes/class-eeb-admin.php:469
+msgid ""
+"Show \"successfully encoded\" text for all encoded content, only when logged "
+"in as admin user."
+msgstr ""
+"Toont \"Veilig beschermd\" tekst voor alle beschermde content, alleen "
+"wanneer je bent ingelogd als admin gebruiker."
+
+#: ../includes/class-eeb-admin.php:470
+msgid "This way you can check if emails are really encoded on your site."
+msgstr ""
+"Op deze manier kun je checken of emails echt beschermd zijn op je site."
+
+#: ../includes/class-eeb-admin.php:475
+msgid "Choose admin menu position"
+msgstr "Kies admin menu positie"
+
+#: ../includes/class-eeb-admin.php:477
+msgid "Show as main menu item."
+msgstr "Toon als hoofdmenu item"
+
+#: ../includes/class-eeb-admin.php:493
+msgid ""
+"If you like you can also create you own secure mailto links manually with "
+"this form. Just copy the generated code and put it on your post, page or "
+"template."
+msgstr ""
+"Met dit formulier kun je handmatig je eigen beschermde mailto links maken. "
+"Kopiëer de gegenereerde code en plaats het in je post, pagina of template."
+
+#: ../includes/class-eeb-admin.php:501
+msgid ""
+"You can also put the encoder form on your site by using the shortcode "
+"<code>[eeb_form]</code> or the template function <code>eeb_form()</code>."
+msgstr ""
+"Je kunt ook de encodeer formulier op je site plaatsen met behulp van de "
+"shortcode <code>[eeb_form]</code> of de template functie <code>eeb_form()</"
+"code>."
+
+#: ../includes/class-eeb-admin.php:506
+msgid "Show \"powered by\""
+msgstr "Toon \"gemaakt door\""
+
+#: ../includes/class-eeb-admin.php:508
+msgid "Show the \"powered by\"-link on bottom of the encoder form"
+msgstr "Toon \"gemaakt door\"-link onderaan de encodeer formulier"
+
+#: ../includes/class-eeb-admin.php:524
+msgid "Documentation"
+msgstr "Documentatie"
+
+#: ../includes/class-eeb-admin.php:525
+msgid "Report a problem"
+msgstr "Meld een probleem"
+
+#: ../includes/class-eeb-admin.php:528
+msgid "Please rate this plugin!"
+msgstr "Laat een review achter!"
+
+#: ../includes/class-eeb-admin.php:536 ../includes/class-eeb-admin.php:549
+msgid "Activate"
+msgstr "Activeer"
+
+#: ../includes/class-eeb-admin.php:538 ../includes/class-eeb-admin.php:551
+msgid "Get this plugin"
+msgstr "Zoek deze plugin"
+
+#: ../includes/class-eeb-admin.php:541
+msgid ""
+"Manage external links on your site: open in new window/tab, set icon, add "
+"\"external\", add \"nofollow\" and more."
+msgstr ""
+"Magage externe links op je site: open in een nieuwe window/tab, zet een "
+"icoon, voeg  \"external\" en \"nofollow\" toe en meer."
+
+#: ../includes/class-eeb-admin.php:554
+msgid ""
+"Manage mailto links on your site and protect emails from spambots, set mail "
+"icon and more."
+msgstr ""
+"Manage mailto links op je site en bescherm emails van spambots, zet mail "
+"icoon en meer."
+
+#: ../includes/class-eeb-admin.php:579
+msgid "Quick Start"
+msgstr "Snel Start"
+
+#: ../includes/class-eeb-admin.php:584
+msgid "Shortcodes"
+msgstr "Shortcodes"
+
+#: ../includes/class-eeb-admin.php:589
+msgid "Template Functions"
+msgstr "Template Functies"
+
+#: ../includes/class-eeb-admin.php:594
+msgid "Action Hook"
+msgstr "Action Hook"
+
+#: ../includes/class-eeb-admin.php:599
+msgid "Filter Hooks"
+msgstr "Filter Hooks"
+
+#: ../includes/class-eeb-admin.php:604
+msgid "FAQ"
+msgstr "FAQ"
+
+#: ../includes/class-eeb-admin.php:621
+#, php-format
+msgid ""
+"<h3><img src=\"%s\" width=\"16\" height=\"16\" /> %s - version %s</h3><p>The "
+"plugin works out-of-the-box. All mailto links in your posts, pages, comments "
+"and (text) widgets will be encoded (by default). <br/>If you also want to "
+"encode plain email address as well, you have to check the option.</p><img "
+"src=\"%s\" width=\"600\" height=\"273\" />"
+msgstr ""
+"<h3><img src=\"%s\" width=\"16\" height=\"16\" /> %s - versie %s</h3><p>De "
+"plugin werkt out-of-the-box. Alle mailto links in posts, pagina's, reacties "
+"en (tekst) widgets worden beschermd (standaard). <br/>Als je ook gewone "
+"email adressen automatisch wilt beschermen, dan moet je de optie aanvinken.</"
+"p><img src=\"%s\" width=\"600\" height=\"273\" />"
+
+#: ../includes/class-eeb-admin.php:626
+msgid ""
+"<h3>Shortcodes</h3><p>You can use these shortcodes within your post or page."
+"</p><h4>eeb_email</h4><p>Create an encoded mailto link:</"
+"p><p><code>[eeb_email email=\"...\" display=\"...\"]</code></p><ul><li>"
+"\"display\" is optional or the email wil be shown as display (also "
+"protected)</li><li>\"extra_attrs\" is optional, example: <code>extra_attrs="
+"\"target='_blank'\"</code></li><li>\"method\" is optional, else the method "
+"option will be used.</li></ul><h4>eeb_content</h4><p>Encode some text:</"
+"p><p><code>[eeb_content method=\"...\"]...[/eeb_content]</code></p><ul><li>"
+"\"method\" is optional, else the method option will be used.</li></"
+"ul><h4>eeb_form</h4><p>Create an encoder form:</p><p><code>[eeb_form]</"
+"code></p>"
+msgstr ""
+"<h3>Shortcodes</h3><p>Je kunt deze shortcodes gebruiken in een post of "
+"pagina.</p><h4>eeb_email</h4><p>Maak een beschermde mailto link:</"
+"p><p><code>[eeb_email email=\"...\" display=\"...\"]</code></p><ul><li>"
+"\"display\" is optioneel, anders wordt het emailadres getoond (uiteraard ook "
+"beschermd)</li><li>\"extra_attrs\" is optioneel, bijv: <code>extra_attrs="
+"\"target='_blank'\"</code></li><li>\"method\" is optioneel, anders wordt de "
+"methode gebruikt, die je hebt ingesteld bij de instellingen.</li></"
+"ul><h4>eeb_content</h4><p>Bescherm willekeurige tekst:</"
+"p><p><code>[eeb_content method=\"...\"]...[/eeb_content]</code></p><ul><li>"
+"\"method\" is optioneel, anders wordt de methode gebruikt, die je hebt "
+"ingesteld bij de instellingen.</li></ul><h4>eeb_form</h4><p>Maak een "
+"encodeer formulier:</p><p><code>[eeb_form]</code></p>"
+
+#: ../includes/class-eeb-admin.php:647
+msgid ""
+"<h3>Template Functions</h3><h4>eeb_email()</h4><p>Create an encoded mailto "
+"link:</p><pre><code><&#63;php\n"
+"if (function_exists('eeb_email')) {\n"
+"    echo eeb_email('info@somedomain.com');\n"
+"}\n"
+"&#63;></code></pre><p>You can pass a few extra optional params (in this "
+"order): <code>display</code>, <code>extra_attrs</code>, <code>method</code></"
+"p><h4>eeb_content()</h4><p>Encode some text:</p><pre><code><&#63;php\n"
+"if (function_exists('eeb_content')) {\n"
+"    echo eeb_content('Encode this text');\n"
+"}\n"
+"&#63;></code></pre><p>You can pas an extra optional param: <code>method</"
+"code></p><h4>eeb_email_filter()</h4><p>Filter given content and encode all "
+"email addresses or mailto links:</p><pre><code><&#63;php\n"
+"if (function_exists('eeb_email_filter')) {\n"
+"    echo eeb_email_filter('Some content with email like info@somedomein.com "
+"or a mailto link');\n"
+"}\n"
+"&#63;></code></pre><p>You can pass a few extra optional params (in this "
+"order): <code>enc_tags</code>, <code>enc_mailtos</code>, "
+"<code>enc_plain_emails</code>, <code>enc_input_fields</code></"
+"p><h4>eeb_form()</h4><p>Create an encoder form:</p><pre><code><&#63;php\n"
+"if (function_exists('eeb_form')) {\n"
+"    echo eeb_form();\n"
+"}\n"
+"&#63;></code></pre>"
+msgstr ""
+"<h3>Template Functies</h3><h4>eeb_email()</h4><p>Maak een beschermde mailto "
+"link:</p><pre><code><&#63;php\n"
+"if (function_exists('eeb_email')) {\n"
+"    echo eeb_email('info@somedomain.com');\n"
+"}\n"
+"&#63;></code></pre><p>Je kunt enkele optionele parameters toevoegen (in deze "
+"volgorde): <code>display</code>, <code>extra_attrs</code>, <code>method</"
+"code></p><h4>eeb_content()</h4><p>Bescherm willekeurige tekst:</"
+"p><pre><code><&#63;php\n"
+"if (function_exists('eeb_content')) {\n"
+"    echo eeb_content('Encode this text');\n"
+"}\n"
+"&#63;></code></pre><p>Je kunt een extra optionele parameter toevoegen: "
+"<code>method</code></p><h4>eeb_email_filter()</h4><p>Filter de content en "
+"bescherm alle email adressen of mailto links:</p><pre><code><&#63;php\n"
+"if (function_exists('eeb_email_filter')) {\n"
+"    echo eeb_email_filter('Some content with email like info@somedomein.com "
+"or a mailto link');\n"
+"}\n"
+"&#63;></code></pre><p>Je kunt enkele optionele parameters toevoegen (in deze "
+"volgorde): <code>enc_tags</code>, <code>enc_mailtos</code>, "
+"<code>enc_plain_emails</code>, <code>enc_input_fields</code></"
+"p><h4>eeb_form()</h4><p>Maak een encodeer formulier:</p><pre><code><&#63;"
+"php\n"
+"if (function_exists('eeb_form')) {\n"
+"    echo eeb_form();\n"
+"}\n"
+"&#63;></code></pre>"
+
+#: ../includes/class-eeb-admin.php:681
+msgid ""
+"<h3>Action Hooks</h3><h4>eeb_ready</h4><p>Add extra code on initializing "
+"this plugin, like extra filters for encoding.</p><pre><code><&#63;php\n"
+"add_action('eeb_ready', 'extra_encode_filters');\n"
+"\n"
+"function extra_encode_filters($eeb_object) {\n"
+"    add_filter('some_filter', array($eeb_object, 'callback_filter'));\n"
+"}\n"
+"&#63;></code></pre>"
+msgstr ""
+"<h3>Action Hooks</h3><h4>eeb_ready</h4><p>Voeg extra code toe bij de "
+"initialisatie van de plugin, zoals extra filters voor encoderen.</"
+"p><pre><code><&#63;php\n"
+"add_action('eeb_ready', 'extra_encode_filters');\n"
+"\n"
+"function extra_encode_filters($eeb_object) {\n"
+"    add_filter('some_filter', array($eeb_object, 'callback_filter'));\n"
+"}\n"
+"&#63;></code></pre>"
+
+#: ../includes/class-eeb-admin.php:692
+msgid ""
+"<h3>Filter Hooks</h3><h4>eeb_mailto_regexp</h4><p>You can change the regular "
+"expression used for searching mailto links.</p><pre><code><&#63;php\n"
+"add_filter('eeb_mailto_regexp', 'change_mailto_regexp');\n"
+"\n"
+"function change_mailto_regexp($regexp) {\n"
+"    return '-your regular expression-';\n"
+"}\n"
+"&#63;></code></pre><h4>eeb_email_regexp</h4><p>You can change the regular "
+"expression used for searching mailto links.</p><pre><code><&#63;php\n"
+"add_filter('eeb_email_regexp', 'change_email_regexp');\n"
+"\n"
+"function change_email_regexp($regexp) {\n"
+"    return '-your regular expression-';\n"
+"}\n"
+"&#63;></code></pre><h4>eeb_form_content</h4><p>Filter for changing the form "
+"layout.</p><pre><code><&#63;php\n"
+"add_filter('eeb_form_content', 'eeb_form_content', 10, 4);\n"
+"\n"
+"function eeb_form_content($content, $labels, $show_powered_by, $methods) {\n"
+"    // add a &lt;div&gt;-wrapper\n"
+"    return '&lt;div class=\"form-wrapper\"&gt;' . $content . '&lt;/"
+"div&gt;';\n"
+"}\n"
+"&#63;></code></pre>"
+msgstr ""
+"<h3>Filter Hooks</h3><h4>eeb_mailto_regexp</h4><p></p><pre><code><&#63;php\n"
+"add_filter('eeb_mailto_regexp', 'change_mailto_regexp');\n"
+"\n"
+"function change_mailto_regexp($regexp) {\n"
+"    return '-your regular expression-';\n"
+"}\n"
+"&#63;></code></pre><h4>eeb_email_regexp</h4><p>De regular expression voor "
+"het vinden van email adressen, kun je zelf wijzigen.</p><pre><code><&#63;"
+"php\n"
+"add_filter('eeb_email_regexp', 'change_email_regexp');\n"
+"\n"
+"function change_email_regexp($regexp) {\n"
+"    return '-your regular expression-';\n"
+"}\n"
+"&#63;></code></pre><h4>eeb_form_content</h4><p>Filter for changing the form "
+"layout.</p><pre><code><&#63;php\n"
+"add_filter('eeb_form_content', 'eeb_form_content', 10, 4);\n"
+"\n"
+"function eeb_form_content($content, $labels, $show_powered_by, $methods) {\n"
+"    // add a &lt;div&gt;-wrapper\n"
+"    return '&lt;div class=\"form-wrapper\"&gt;' . $content . '&lt;/"
+"div&gt;';\n"
+"}\n"
+"&#63;></code></pre>"
+
+#: ../includes/class-eeb-admin.php:720
+msgid ""
+"<h3>FAQ</h3><p>Please check the <a href=\"http://wordpress.org/extend/"
+"plugins/email-encoder-bundle/faq/\" target=\"_blank\">FAQ on the Plugin "
+"site</a>."
+msgstr ""
+"<h3>FAQ</h3><p>Kijk op de <a href=\"http://wordpress.org/extend/plugins/"
+"email-encoder-bundle/faq/\" target=\"_blank\">FAQ van de Plugin site</a>."
+
+#: ../includes/class-eeb-admin.php:724
+msgid ""
+"<h4>About the author</h4><ul><li><a href=\"http://www.freelancephp.net/\" "
+"target=\"_blank\">FreelancePHP.net</a></li><li><a href=\"http://www."
+"freelancephp.net/contact/\" target=\"_blank\">Contact</a></li></ul>"
+msgstr ""
+"<h4>Over de auteur</h4><ul><li><a href=\"http://www.freelancephp.net/\" "
+"target=\"_blank\">FreelancePHP.net</a></li><li><a href=\"http://www."
+"freelancephp.net/contact/\" target=\"_blank\">Contact</a></li></ul>"
+
+#: ../includes/class-eeb-admin.php:754
+msgid "Powered by"
+msgstr "Gemaakt door"
+
+#: ../includes/class-eeb-admin.php:758
+msgid "Email Address:"
+msgstr "Email Adres:"
+
+#: ../includes/class-eeb-admin.php:759
+msgid "Display Text:"
+msgstr "Link Tekst:"
+
+#: ../includes/class-eeb-admin.php:760
+msgid "Mailto Link:"
+msgstr "Mailto Link:"
+
+#: ../includes/class-eeb-admin.php:761
+msgid "Encoding Method:"
+msgstr "Encodeer Methode:"
+
+#: ../includes/class-eeb-admin.php:762
+msgid "Create Protected Mail Link &gt;&gt;"
+msgstr "Maak Beschermde Email Link &gt;&gt;"
+
+#: ../includes/class-eeb-admin.php:763
+msgid "Protected Mail Link (code):"
+msgstr "Beschermde Email Link (code):"
+
+#: ../includes/class-eeb-site.php:429
+msgid ""
+"Successfully Encoded (this is a check and only visible when logged in as "
+"admin)"
+msgstr ""
+"Veilig Beschermd (deze check is alleen zichtbaar omdat je bent ingelogd als "
+"admin)"
+
+#: ../includes/class-eeb-site.php:431
+msgid "Encoded"
+msgstr "Beschermd"
+
+#: ../includes/class-eeb-site.php:432
+msgid "Successfully Encoded"
+msgstr "Veilig Beschermd"
