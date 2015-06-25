@@ -475,12 +475,15 @@ final class Eeb_Site extends Eeb_Admin {
         $mail_indices = str_replace("\\", "\\\\", $mail_indices);
         $mail_indices = str_replace("\"", "\\\"", $mail_indices);
 
-        return '<script type="text/javascript">'
+        $element_id = 'eeb-' . mt_rand(0, 1000000);
+
+        return '<span id="'. $element_id . '"></span>'
+                . '<script type="text/javascript">'
                 . '(function(){'
                 . 'var ml="'. $mail_letters_enc .'",mi="'. $mail_indices .'",o="";'
                 . 'for(var j=0,l=mi.length;j<l;j++){'
                 . 'o+=ml.charAt(mi.charCodeAt(j)-48);'
-                . '}document.write(decodeURIComponent(o));' // decode at the end, this way special chars can be supported
+                . '}document.getElementById("' . $element_id . '").innerHTML = decodeURIComponent(o);' // decode at the end, this way special chars can be supported
                 . '}());'
                 . '</script><noscript>'
                 . $protection_text
@@ -507,11 +510,13 @@ final class Eeb_Site extends Eeb_Admin {
      * @return string
      */
     private function enc_escape($value, $protection_text) {
-        $string = 'document.write(\'' . $value . '\')';
+        $element_id = 'eeb-' . mt_rand(0, 1000000);
+        $string = '\'' . $value . '\'';
 
         // break string into array of characters, we can't use string_split because its php5 only
         $split = preg_split('||', $string);
-        $out =  '<script type="text/javascript">' . "eval(decodeURIComponent('";
+        $out =  '<span id="'. $element_id . '"></span>'
+                . '<script type="text/javascript">' . "document.getElementById('" . $element_id . "').innerHTML = eval(decodeURIComponent('";
 
         foreach ($split as $c) {
             // preg split will return empty first and last characters, check for them and ignore
