@@ -4,7 +4,7 @@ Plugin Name: Email Encoder Bundle - Protect Email Address
 Plugin URI: http://www.freelancephp.net/email-encoder-php-class-wp-plugin/
 Description: Protect email addresses on your site and hide them from spambots by using an encoding method. Easy to use, flexible .
 Author: Victor Villaverde Laan
-Version: 1.4.1
+Version: 1.4.2
 Author URI: http://www.freelancephp.net
 License: Dual licensed under the MIT and GPL licenses
 Text Domain: email-encoder-bundle
@@ -12,7 +12,7 @@ Domain Path: /languages
 */
 
 // constants
-if (!defined('EMAIL_ENCODER_BUNDLE_VERSION')) { define('EMAIL_ENCODER_BUNDLE_VERSION', '1.4.1'); }
+if (!defined('EMAIL_ENCODER_BUNDLE_VERSION')) { define('EMAIL_ENCODER_BUNDLE_VERSION', '1.4.2'); }
 if (!defined('EMAIL_ENCODER_BUNDLE_FILE')) { define('EMAIL_ENCODER_BUNDLE_FILE', __FILE__); }
 if (!defined('EMAIL_ENCODER_BUNDLE_KEY')) { define('EMAIL_ENCODER_BUNDLE_KEY', 'WP_Email_Encoder_Bundle'); }
 if (!defined('EMAIL_ENCODER_BUNDLE_DOMAIN')) { define('EMAIL_ENCODER_BUNDLE_DOMAIN', 'email-encoder-bundle'); }
@@ -36,15 +36,20 @@ if (version_compare($wp_version, '3.6', '>=') && version_compare(phpversion(), '
     $Eeb_Site = Eeb_Site::getInstance();
 
     // handle AJAX request
-    if (!empty($_GET['ajaxEncodeEmail'])):
-        // input vars
-        $method = $_GET['method'];
-        $email = $_GET['email'];
-        $display = (empty($_GET['display'])) ? $email : $_GET['display'];
+    // input vars
+    if (!empty($_POST['eebActionEncodeEmail'])) {
+        $eebActionEncodeEmail = sanitize_text_field($_POST['eebActionEncodeEmail']);
+        $method = sanitize_text_field($_POST['eebMethod']);
+        $email = sanitize_email($_POST['eebEmail']);
+        $display = wp_kses_post($_POST['eebDisplay']);
+
+        if (empty($display)) {
+            $display = $email;
+        }
 
         echo $Eeb_Site->encode_email($email, $display, '', $method, true);
         exit;
-    endif;
+    }
 
 } else {
 

@@ -19,11 +19,11 @@ jQuery(function ($) {
         $wrap.find('#eeb-encoded-output').val('');
 
         // get the encoded email link
-        $.get('', {
-            ajaxEncodeEmail: true,
-            email: $email.val(),
-            display: $display.val() || $email.val(),
-            method: $wrap.find('#eeb-encode-method').val()
+        $.post('', {
+            eebActionEncodeEmail: true,
+            eebEmail: $email.val(),
+            eebDisplay: $display.val() || $email.val(),
+            eebMethod: $wrap.find('#eeb-encode-method').val()
         }, function (data) {
             $wrap.find('#eeb-encoded-output').val(data);
             $wrap.find('.eeb-output').fadeIn();
