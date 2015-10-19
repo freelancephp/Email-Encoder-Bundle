@@ -4,7 +4,7 @@ Plugin Name: Email Encoder Bundle - Protect Email Address
 Plugin URI: http://www.freelancephp.net/email-encoder-php-class-wp-plugin/
 Description: Protect email addresses on your site and hide them from spambots by using an encoding method. Easy to use, flexible .
 Author: Victor Villaverde Laan
-Version: 1.4.2
+Version: 1.4.3
 Author URI: http://www.freelancephp.net
 License: Dual licensed under the MIT and GPL licenses
 Text Domain: email-encoder-bundle
@@ -12,10 +12,9 @@ Domain Path: /languages
 */
 
 // constants
-if (!defined('EMAIL_ENCODER_BUNDLE_VERSION')) { define('EMAIL_ENCODER_BUNDLE_VERSION', '1.4.2'); }
+if (!defined('EMAIL_ENCODER_BUNDLE_VERSION')) { define('EMAIL_ENCODER_BUNDLE_VERSION', '1.4.3'); }
 if (!defined('EMAIL_ENCODER_BUNDLE_FILE')) { define('EMAIL_ENCODER_BUNDLE_FILE', __FILE__); }
 if (!defined('EMAIL_ENCODER_BUNDLE_KEY')) { define('EMAIL_ENCODER_BUNDLE_KEY', 'WP_Email_Encoder_Bundle'); }
-if (!defined('EMAIL_ENCODER_BUNDLE_DOMAIN')) { define('EMAIL_ENCODER_BUNDLE_DOMAIN', 'email-encoder-bundle'); }
 if (!defined('EMAIL_ENCODER_BUNDLE_OPTIONS_NAME')) { define('EMAIL_ENCODER_BUNDLE_OPTIONS_NAME', 'WP_Email_Encoder_Bundle_options'); }
 if (!defined('EMAIL_ENCODER_BUNDLE_ADMIN_PAGE')) { define('EMAIL_ENCODER_BUNDLE_ADMIN_PAGE', 'email-encoder-bundle-settings'); }
 
@@ -61,7 +60,7 @@ if (version_compare($wp_version, '3.6', '>=') && version_compare(phpversion(), '
             echo '<div class="error">'
                 . sprintf(__('<p>Warning - The plugin <strong>%s</strong> requires PHP 5.2.4+ and WP 3.6+.  Please upgrade your PHP and/or WordPress.'
                              . '<br/>Disable the plugin to remove this message.</p>'
-                             , EMAIL_ENCODER_BUNDLE_DOMAIN), $plugin_title)
+                             , 'email-encoder-bundle'), $plugin_title)
                 . '</div>';
         }
 

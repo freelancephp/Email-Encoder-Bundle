@@ -426,10 +426,10 @@ final class Eeb_Site extends Eeb_Admin {
 
         return $content
                 . '<a href="javascript:;" class="encoded-check"'
-                . ' title="' . __('Successfully Encoded (this is a check and only visible when logged in as admin)', EMAIL_ENCODER_BUNDLE_DOMAIN) . '">'
+                . ' title="' . __('Successfully Encoded (this is a check and only visible when logged in as admin)', 'email-encoder-bundle') . '">'
                 . '<img class="encoded-check-icon" src="' . plugins_url('images/icon-email-encoder-bundle.png', EMAIL_ENCODER_BUNDLE_FILE)
-                . '" alt="' . __('Encoded', EMAIL_ENCODER_BUNDLE_DOMAIN) . '" />'
-                . __('Successfully Encoded', EMAIL_ENCODER_BUNDLE_DOMAIN) . '</a>';
+                . '" alt="' . __('Encoded', 'email-encoder-bundle') . '" />'
+                . __('Successfully Encoded', 'email-encoder-bundle') . '</a>';
     }
 
     /* -------------------------------------------------------------------------
