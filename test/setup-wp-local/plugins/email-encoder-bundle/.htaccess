@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule images/(.*)$ http://localhost/git/Email-Encoder-Bundle/email-encoder-bundle/images/$1
+RewriteRule js/(.*)$ http://localhost/git/Email-Encoder-Bundle/email-encoder-bundle/js/$1
+RewriteRule css/(.*)$ http://localhost/git/Email-Encoder-Bundle/email-encoder-bundle/css/$1
+</IfModule>
