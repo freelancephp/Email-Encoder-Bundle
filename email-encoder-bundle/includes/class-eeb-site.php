@@ -29,8 +29,8 @@ final class Eeb_Site extends Eeb_Admin {
      * @var array  Regular expresssions
      */
     private $regexp_patterns = array(
-        'mailto' => '/<a([^<>]*?)href=["\']mailto:(.*?)["\'](.*?)>(.*?)<\/a[\s+]*>/is',
-        'email' => '/([A-Z0-9._-]+@[A-Z0-9][A-Z0-9.-]{0,61}[A-Z0-9]\.[A-Z.]{2,6})/is',
+        'mailto' => '/<a([^<>]*?)href=["\']mailto:([A-Z0-9._-]+@[A-Z0-9][A-Z0-9.-]{0,61}[A-Z0-9](\.[A-Z.]{2,6}))["\'](.*?)>(.*?)<\/a[\s+]*>/is',
+        'email' => '/[A-Z0-9._-]+@[A-Z0-9][A-Z0-9.-]{0,61}[A-Z0-9](\.[A-Z.]{2,6})/is',
         'input' => '/<input([^>]*)value=["\'][\s+]*([A-Z0-9._-]+@[A-Z0-9][A-Z0-9.-]{0,61}[A-Z0-9]\.[A-Z.]{2,6})[\s+]*["\']([^>]*)>/is',
         'class' => '/class=["\'](.*?)["\']/i',
     );
@@ -241,12 +241,24 @@ final class Eeb_Site extends Eeb_Admin {
      * @return string
      */
     public function callback_encode_email($match) {
-        if (count($match) < 3) {
-            $encoded = $this->encode_email($match[1]);
-        } else if (count($match) == 3) {
-            $encoded = $this->encode_email($match[2]);
+        if (count($match) < 4) {
+            $email = $match[0];
+            $extention = strtolower($match[1]);
         } else {
-            $encoded = $this->encode_email($match[2], $match[4], $match[1] . ' ' . $match[3]);
+            $email = $match[2];
+            $extention = strtolower($match[3]);
+        }
+
+        // workaround to skip responsive image names containing @
+        $excludedList = array('.jpg', '.jpeg', 'png', 'gif');
+        if (in_array($extention, $excludedList)) {
+            return $match[0];
+        }
+
+        if (count($match) < 4) {
+            $encoded = $this->encode_email($email);
+        } else {
+            $encoded = $this->encode_email($email, $match[5], $match[1] . ' ' . $match[4]);
         }
 
         // workaround for double encoding bug when auto-protect mailto is enabled and method is enc_html
