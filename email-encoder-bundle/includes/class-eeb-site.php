@@ -297,8 +297,7 @@ final class Eeb_Site extends Eeb_Admin {
      */
     public function shortcode_email_encoder_form() {
         // add style and script for ajax encoder
-//        wp_enqueue_script('email_encoder', plugins_url('js/src/email-encoder-bundle.js', EMAIL_ENCODER_BUNDLE_FILE), array('jquery'), EMAIL_ENCODER_BUNDLE_VERSION);
-        wp_enqueue_script('email_encoder', plugins_url('js/email-encoder-bundle.min.js', EMAIL_ENCODER_BUNDLE_FILE), array('jquery'), EMAIL_ENCODER_BUNDLE_VERSION);
+        wp_enqueue_script('email_encoder', plugins_url('js/email-encoder-bundle.js', EMAIL_ENCODER_BUNDLE_FILE), array('jquery'), EMAIL_ENCODER_BUNDLE_VERSION);
 
         return $this->get_encoder_form();
     }
