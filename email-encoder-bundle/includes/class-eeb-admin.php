@@ -252,6 +252,7 @@ abstract class Eeb_Admin {
         add_meta_box('rss_settings', __('RSS Settings', 'email-encoder-bundle'), array($this, 'show_meta_box_content'), null, 'normal', 'core', array('rss_settings'));
         add_meta_box('admin_settings', __('Admin Settings', 'email-encoder-bundle'), array($this, 'show_meta_box_content'), null, 'normal', 'core', array('admin_settings'));
         add_meta_box('encode_form', __('Email Encoder Form', 'email-encoder-bundle'), array($this, 'show_meta_box_content'), null, 'normal', 'core', array('encode_form'));
+        add_meta_box('future', __('Future, end of support...', 'email-encoder-bundle'), array($this, 'show_meta_box_content'), null, 'normal', 'core', array('future'));
         add_meta_box('this_plugin', __('Support', 'email-encoder-bundle'), array($this, 'show_meta_box_content'), null, 'side', 'core', array('this_plugin'));
         add_meta_box('other_plugins', __('Other Plugins', 'email-encoder-bundle'), array($this, 'show_meta_box_content'), null, 'side', 'core', array('other_plugins'));
     }
@@ -515,6 +516,21 @@ abstract class Eeb_Admin {
                 <input class="button-primary" type="submit" disabled="disabled" value="<?php _e('Save Changes') ?>" />
             </p>
             <br class="clear" />
+
+<?php
+        } else if ($key === 'future') {
+?>
+
+            <p>The support and further development of <strong>Email Encoder Bundle</strong> will soon come to an end and will continue as <strong>WP Mailto Links</strong>.</p>
+
+            <p>Therefore I would like to know, why do you like this plugin? Which features or settings do you use?
+                <br>And what features are you missing in the WP Mailto Links plugin to make the transfer?
+            </p>
+            
+            <p>Please share your thoughts on <a href="https://wordpress.org/support/topic/why-prefer-email-encoder-bundle-over-wp-mailto-links?replies=1" target="_blank">this page</a>.
+            </p>
+
+            <p><a class="button button-secondary" href="javascript:;" onclick="jQuery('#future-hide').click();">Hide this message</a></p>
 
 <?php
         } else if ($key === 'this_plugin') {
