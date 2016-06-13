@@ -187,7 +187,7 @@ final class Eeb_Site extends Eeb_Admin {
      * @return string
      */
     public function callback_filter_rss($content) {
-        $content = preg_replace($this->regexp_patterns, $this->options['protection_text_rss'], $content);
+        $content = preg_replace($this->regexp_patterns, esc_attr($this->options['protection_text_rss']), $content);
 
         return $content;
     }
@@ -351,7 +351,7 @@ final class Eeb_Site extends Eeb_Admin {
      */
     public function encode_content($content, $method = null, $no_html_checked = false, $protection_text = null) {
         if ($protection_text === null) {
-            $protection_text = $this->options['protection_text_content'];
+            $protection_text = esc_attr($this->options['protection_text_content']);
         }
 
         // get encode method
@@ -404,10 +404,10 @@ final class Eeb_Site extends Eeb_Admin {
         // add class
         if (preg_match($this->regexp_patterns['class'], $extra_attrs, $matches)) {
             // class attribute set
-            $extra_attrs = str_replace($matches[0], sprintf('class="%s"', $matches[1] . ' ' . $this->options['class_name']), $extra_attrs);
+            $extra_attrs = str_replace($matches[0], sprintf('class="%s"', $matches[1] . ' ' . esc_attr($this->options['class_name'])), $extra_attrs);
         } else {
             // class attribute not set
-            $extra_attrs .= ' class="' . $this->options['class_name'] . '"';
+            $extra_attrs .= ' class="' . esc_attr($this->options['class_name']) . '"';
         }
 
         $mailto = '<a href="mailto:' . $email . '"'. $extra_attrs . '>' . $display . '</a>';
@@ -418,7 +418,7 @@ final class Eeb_Site extends Eeb_Admin {
                 $mailto = $this->get_success_check($mailto);
             }
         } else {
-            $mailto = $this->encode_content($mailto, $method, $no_html_checked, $this->options['protection_text']);
+            $mailto = $this->encode_content($mailto, $method, $no_html_checked, esc_attr($this->options['protection_text']));
         }
 
         // get encoded email code
