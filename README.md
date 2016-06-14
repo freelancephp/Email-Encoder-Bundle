@@ -21,12 +21,6 @@ Easy to use
 After activating the plugin all mailto links will be protected automatically.
 You could use shortcodes or template functions to protect plain email addresses, phone numbers or other text.
 
-= Support =
-
-* Documentation - When activated check the "Help"-tab on the plugin options page
-* [FAQ](http://wordpress.org/extend/plugins/email-encoder-bundle/faq/)
-* [Github](https://github.com/freelancephp/Email-Encoder-Bundle)
-
 
 Support
 -------
@@ -41,6 +35,7 @@ Support
  - Documentation - When activated check the "Help"-tab on the plugin options page
  - [FAQ](http://wordpress.org/extend/plugins/email-encoder-bundle/faq/)
  - [Github](https://github.com/freelancephp/Email-Encoder-Bundle)
+ - [All Releases](https://wordpress.org/plugins/email-encoder-bundle/developers/)
 
 
 Like this plugin?
