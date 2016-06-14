@@ -349,7 +349,7 @@ abstract class Eeb_Admin {
                 </tr>
                 <tr>
                     <th><?php _e('Add class to protected mailto links', 'email-encoder-bundle') ?></th>
-                    <td><label><input type="text" id="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[class_name]" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[class_name]" value="<?php echo $options['class_name']; ?>" />
+                    <td><label><input type="text" id="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[class_name]" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[class_name]" value="<?php echo esc_attr($options['class_name']); ?>" />
                         <br/><span class="description"><?php _e('All protected mailto links will get these class(es). Optional, else keep blank.', 'email-encoder-bundle') ?></span></label></td>
                 </tr>
                 </table>
@@ -379,7 +379,7 @@ abstract class Eeb_Admin {
                 </tr>
                 <tr>
                     <th><?php _e('Set protection text in RSS feeds', 'email-encoder-bundle') ?></th>
-                    <td><label><input type="text" id="protection_text" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[protection_text_rss]" value="<?php echo $options['protection_text_rss']; ?>" />
+                    <td><label><input type="text" id="protection_text" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[protection_text_rss]" value="<?php echo esc_attr($options['protection_text_rss']); ?>" />
                             <br/><span class="description"><?php _e('Used as replacement for email addresses in RSS feeds.', 'email-encoder-bundle') ?></span>
                         </label>
                     </td>
@@ -413,13 +413,13 @@ abstract class Eeb_Admin {
                     <th><?php _e('Set <code>&lt;noscript&gt;</code> text', 'email-encoder-bundle') ?></th>
                     <td><label>
                             <span><?php _e('For encoded emails:', 'email-encoder-bundle') ?></span>
-                            <br/><input type="text" id="protection_text" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[protection_text]" value="<?php echo $options['protection_text']; ?>" />
+                            <br/><input type="text" id="protection_text" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[protection_text]" value="<?php echo esc_attr($options['protection_text']); ?>" />
                         </label>
                         <br/>
                         <br/>
                         <label>
                             <span><?php _e('For other encoded content:', 'email-encoder-bundle') ?></span>
-                            <br/><input type="text" id="protection_text_content" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[protection_text_content]" value="<?php echo $options['protection_text_content']; ?>" />
+                            <br/><input type="text" id="protection_text_content" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[protection_text_content]" value="<?php echo esc_attr($options['protection_text_content']); ?>" />
                         </label>
                         <br/>
                         <br/><span class="description"><?php _e('Used as <code>&lt;noscript&gt;</code> fallback for JavaScrip methods.', 'email-encoder-bundle') ?></span>
@@ -430,7 +430,7 @@ abstract class Eeb_Admin {
                     <td>
                         <label>
                             <span><?php _e('Do <strong>not</strong> apply protection on posts or pages with the folllowing ID:', 'email-encoder-bundle') ?></span>
-                            <br/><input type="text" id="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[skip_posts]" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[skip_posts]" value="<?php echo $options['skip_posts']; ?>" />
+                            <br/><input type="text" id="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[skip_posts]" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[skip_posts]" value="<?php echo esc_attr($options['skip_posts']); ?>" />
                             <br/><span class="description"><?php _e('Seperate Id\'s by comma, f.e.: 2, 7, 13, 32.', 'email-encoder-bundle') ?></span>
                             <br/><span class="description"><?php _e('Notice: shortcodes still work on these posts.', 'email-encoder-bundle') ?></span>
                         </label>
