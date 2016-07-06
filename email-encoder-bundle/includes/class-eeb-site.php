@@ -174,7 +174,7 @@ final class Eeb_Site extends Eeb_Admin {
     public function callback_filter($content) {
         global $post;
 
-        if (isset($post) && in_array($post->ID, $this->skip_posts)) {
+        if (isset($post) && is_a($post, 'WP_Post') && in_array($post->ID, $this->skip_posts)) {
             return $content;
         }
 
