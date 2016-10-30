@@ -250,7 +250,7 @@ final class Eeb_Site extends Eeb_Admin {
         }
 
         // workaround to skip responsive image names containing @
-        $excludedList = array('.jpg', '.jpeg', 'png', 'gif');
+        $excludedList = array('.jpg', '.jpeg', '.png', '.gif');
         if (in_array($extention, $excludedList)) {
             return $match[0];
         }
