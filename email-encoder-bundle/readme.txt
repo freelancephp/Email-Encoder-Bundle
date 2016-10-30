@@ -2,8 +2,8 @@
 Contributors: freelancephp
 Tags: email address, protect, antispam, mailto, spambot, secure, e-mail, email, mail, obfuscate, encode, encoder, encrypt, hide, bot, crawl, spider, robots, spam, protection, harvest, harvesting, security
 Requires at least: 3.6.0
-Tested up to: 4.5.2
-Stable tag: 1.4.5
+Tested up to: 4.6.1
+Stable tag: 1.4.6
 
 Encode mailto links, email addresses, phone numbers and any text to hide them from (spam)bots. Mailto links will be protected automatically.
 
@@ -123,6 +123,9 @@ It's possible to filter all widgets by using the [Widget Logic Plugin](https://w
 * Title icon on Admin Options Page was made by [Jack Cai](http://www.doublejdesign.co.uk/)
 
 == Changelog ==
+
+= 1.4.6 =
+* Fixed bug retina png and gif images
 
 = 1.4.5 =
 * Fixed ? params bug
