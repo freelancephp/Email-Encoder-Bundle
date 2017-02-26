@@ -10,7 +10,7 @@ License:        Dual licensed under the MIT and GPL licenses
 */
 define('TEST_EEB_PLUGIN_FILE', __FILE__);
 
-// include plugin
-require_once($_SERVER['DOCUMENT_ROOT'] . 'git/Email-Encoder-Bundle/email-encoder-bundle/email-encoder-bundle.php');
 
-/*?>*/
+// include plugin file (DEV version)
+require_once(dirname( __FILE__ ) . '/../../../../../wp-plugins/eeb/Email-Encoder-Bundle/email-encoder-bundle/email-encoder-bundle.php');
+
