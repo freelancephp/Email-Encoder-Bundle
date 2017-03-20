@@ -2,7 +2,7 @@
 Contributors: freelancephp
 Tags: email address, protect, antispam, mailto, spambot, secure, e-mail, email, mail, obfuscate, encode, encoder, encrypt, hide, bot, crawl, spider, robots, spam, protection, harvest, harvesting, security
 Requires at least: 3.6.0
-Tested up to: 4.6.1
+Tested up to: 4.7.3
 Stable tag: 1.4.6
 
 Encode mailto links, email addresses, phone numbers and any text to hide them from (spam)bots. Mailto links will be protected automatically.
