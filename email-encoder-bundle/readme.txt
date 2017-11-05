@@ -2,8 +2,8 @@
 Contributors: freelancephp
 Tags: email address, protect, antispam, mailto, spambot, secure, e-mail, email, mail, obfuscate, encode, encoder, encrypt, hide, bot, crawl, spider, robots, spam, protection, harvest, harvesting, security
 Requires at least: 3.6.0
-Tested up to: 4.7.3
-Stable tag: 1.4.6
+Tested up to: 4.8.3
+Stable tag: 1.4.7
 
 Encode mailto links, email addresses, phone numbers and any text to hide them from (spam)bots. Mailto links will be protected automatically.
 
@@ -39,6 +39,17 @@ You could use shortcodes or template functions to protect plain email addresses,
 1. Click on `Activate plugin`
 
 == Frequently Asked Questions ==
+
+= How can I test if an emailaddrees (or other content) is encoded? =
+
+First you can enable the plugin option (in the admin panel) called *"Show 'successfully encoded' text for all encoded content, only when logged in as admin user."*.
+When you are logged in and look on the page there will be a sign on the righ side of the emailaddress confirming it was successfully encoded.
+
+The other way is to check the source code yourself by right-clicking on the page and select *Page Source Code* (the exact text depends on the browser).
+Now your (real) source code will be shown. YOur emailaddress should not be shown in a readable way in the source.
+
+**Important:** in the element inspector of the browser the emailaddress is *always* shown, so don't worry about that. That is because the inspector shows
+a real time representation of the page. This means an encoded emailaddress is already decoded and made usable for the visistor of the page.
 
 = How do I encode my email address(es)? =
 
