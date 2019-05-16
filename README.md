@@ -1,6 +1,10 @@
 Email Encoder Bundle
 ====================
 
+> **_From 13 March 2019 this WordPress plugin has been taken over by WebFactory. Take a look at the [plugin page on wordpress.org](https://wordpress.org/plugins/email-encoder-bundle/)  to follow further updates._**
+
+---
+
 Encode mailto links, email addresses, phone numbers and any text to hide them from (spam)bots. Mailto links will be protected automatically.
 
 
